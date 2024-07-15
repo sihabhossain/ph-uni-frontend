@@ -1,8 +1,7 @@
 import { Button, Layout } from "antd";
-
 import Sidebar from "./Sidebar";
-import { Outlet } from "react-router-dom";
 import { useAppDispatch } from "../../redux/hooks";
+import { Outlet } from "react-router-dom";
 import { logOut } from "../../redux/features/auth/authSlice";
 const { Header, Content } = Layout;
 
@@ -14,11 +13,11 @@ const MainLayout = () => {
   };
 
   return (
-    <Layout style={{ height: "100vh" }}>
+    <Layout style={{ height: "100%" }}>
       <Sidebar />
       <Layout>
         <Header>
-          <Button onClick={handleLogout}>Logout</Button>
+          <Button onClick={handleLogout}>Logout</Button>{" "}
         </Header>
         <Content style={{ margin: "24px 16px 0" }}>
           <div
